@@ -1,0 +1,112 @@
+#include <stdio.h>
+//Jaime B Perez Jr.
+// Argumment pass but no return value
+
+//function prototyp
+int zodiacSign(char month2[], int day2);
+int main(){
+
+int day;
+char month[20];//String for storing a character for month
+
+printf("Aquarius-       January 20 -    February 18\n");
+printf("Pisces-         February 19 -   March 20\n");
+printf("Aries-          March 21 -      April 19\n");
+printf("Taurus-         April 20 -      May 20\n");
+printf("Gemini-         May 21 -        June 20\n");
+printf("Cancer-         June 21 -       July 22\n");
+printf("Leo-            July 23 -       August 22\n");
+printf("Virgo-          August 23 -     September 22\n");
+printf("Libra-          September 23 -  October 22\n");
+printf("Scorpio-        October 23 -    November 21\n");
+printf("Sagittarius-    November 22 -   December 21\n");
+printf("Capricorn-      December 22 -   January 19\n");
+printf("_______________________________________________\n\n");
+printf("Please put a month and day (Month day):");
+scanf(" %s %d", &month, &day);
+
+//calling a zodiacSign prototyp to know the zodiac sign of the user input
+zodiacSign(month,day);
+return 0;
+}
+
+//determining the zodiac sign based on the user input, Month and Day
+int zodiacSign(char month2[], int day2) {
+   if(month2[6] == 'y' || month2[6] == 'Y'){//January
+        if(day2 >= 20){
+            printf("Your zodiac Sign is Aquarius\n");
+        }else{
+            printf("Your zodiac Sign is Capricorn\n");
+        }
+   }else if(month2[0] == 'f' || month2[0] == 'F'){//February
+        if(day2 >= 19){
+            printf("Your zodiac Sign is Pisces\n");
+        }else{
+            printf("Your zodiac Sign is Aquarius\n");
+        }
+   }else if(month2[4] == 'h' ||month2[4] == 'H'){//March
+        if(day2 >= 21){
+            printf("Your zodiac Sign is Aries\n");
+        }else{
+            printf("Your zodiac Sign is Pisces\n");
+        }
+   }else if(month2[1] == 'p' ||month2[1] == 'P'){//April
+        if(day2 >= 20){
+            printf("Your zodiac Sign is Taurus\n");
+        }else{
+            printf("Your zodiac Sign is Aries\n");
+        }
+   }else if(month2[0] == 'm' ||month2[0] == 'M'){//May
+        if(day2 >= 21){
+            printf("Your zodiac Sign is Gemini\n");
+        }else{
+            printf("Your zodiac Sign is Taurus\n");
+        }
+   }else if(month2[2] == 'n' ||month2[2] == 'N'){//June
+        if(day2 >= 21){
+            printf("Your zodiac Sign is Cancer\n");
+        }else{
+            printf("Your zodiac Sign is Gemini\n");
+        }
+   }else if(month2[0] == 'j' ||month2[0] == 'J'){//July
+        if(day2 >= 23){
+            printf("Your zodiac Sign is Leo\n");
+        }else{
+            printf("Your zodiac Sign is Cancer\n");
+        }
+   }else if(month2[0] == 'a' ||month2[0] == 'A'){//August
+        if(day2 >= 23){
+            printf("Your zodiac Sign is Virgo\n");
+        }else{
+            printf("Your zodiac Sign is Leo\n");
+        }
+   }else if(month2[0] == 's' ||month2[0] == 'S'){//September
+        if(day2 >= 23){
+            printf("Your zodiac Sign is Libra\n");
+        }else{
+            printf("Your zodiac Sign is Virgo\n");
+        }
+   }else if(month2[0] == 'o' ||month2[0] == 'O'){//October
+        if(day2 >= 23){
+            printf("Your zodiac Sign is Scorpio\n");
+        }else{
+            printf("Your zodiac Sign is Libra\n");
+        }
+   }else if(month2[0] == 'n' ||month2[0] == 'N'){//November
+        if(day2 >= 22){
+            printf("Your zodiac Sign is Sagittarius\n");
+        }else{
+            printf("Your zodiac Sign is Scorpio\n");
+        }
+   }else if(month2[0] == 'd' ||month2[0] == 'D'){//December
+        if(day2 >= 22){
+            printf("Your zodiac Sign is Capricorn\n");
+        }else{
+            printf("Your zodiac Sign is Sagittarius\n");
+        }
+   }else{
+       printf("Invalid month\n");
+   }
+   return 0;
+}// every single month, there's a single character that the system
+// can easily defined what month is the user looking for.
